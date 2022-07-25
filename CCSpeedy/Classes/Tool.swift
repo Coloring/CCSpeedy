@@ -6,7 +6,7 @@ public func __(_ text: String) -> String {
     return NSLocalizedString(text, tableName: "Localizations", bundle: Bundle.main, value: "", comment: "")
 }
 
-class Tool {
+public class Tool {
     
     /// APP icon
     static var appIcon: UIImage? {
@@ -86,23 +86,23 @@ extension Tool {
 
 extension Tool {
     
-    static let isIPad: Bool = {
+    public static let isIPad: Bool = {
         return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad
     }()
     
     /// 是否横竖屏，用户界面横屏了才会返回true
     @available(iOSApplicationExtension, unavailable)
-    static var isLandscape: Bool {
+    public static var isLandscape: Bool {
         return UIApplication.shared.statusBarOrientation.isLandscape
     }
     
     /// 屏幕宽度，跟横竖屏无关
     @available(iOSApplicationExtension, unavailable)
-    static let deviceWidth = isLandscape ? UIScreen.main.bounds.height : UIScreen.main.bounds.width
+    public static let deviceWidth = isLandscape ? UIScreen.main.bounds.height : UIScreen.main.bounds.width
 
     /// 屏幕高度，跟横竖屏无关
     @available(iOSApplicationExtension, unavailable)
-    static let deviceHeight = isLandscape ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
+    public static let deviceHeight = isLandscape ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
     
 }
 

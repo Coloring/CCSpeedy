@@ -1,11 +1,11 @@
 
 import UIKit
 
-class CCLabel: UILabel {
+open class CCLabel: UILabel {
 
-    var contentInset: UIEdgeInsets = .zero
+    open var contentInset: UIEdgeInsets = .zero
     
-    override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+    open override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
         var rect: CGRect = super.textRect(forBounds: bounds.inset(by: contentInset), limitedToNumberOfLines: numberOfLines)
         rect.origin.x -= contentInset.left;
         rect.origin.y -= contentInset.top;
@@ -14,7 +14,7 @@ class CCLabel: UILabel {
         return rect
     }
     
-    override func drawText(in rect: CGRect) {
+    open override func drawText(in rect: CGRect) {
         super.drawText(in: rect.inset(by: contentInset))
     }
 
