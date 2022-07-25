@@ -1,0 +1,29 @@
+{
+  "name": "CCSpeedy",
+  "version": "0.1.0",
+  "summary": "Coloring Speedy.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/coloring/CCSpeedy",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "coloring": "coloring"
+  },
+  "source": {
+    "git": "https://github.com/coloring/CCSpeedy.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "CCSpeedy/Classes/**/*",
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

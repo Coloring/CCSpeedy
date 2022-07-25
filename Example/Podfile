@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'CCSpeedy_Example' do
+  pod 'CCSpeedy', :path => '../'
+
+  target 'CCSpeedy_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

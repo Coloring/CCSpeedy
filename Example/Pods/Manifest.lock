@@ -1,0 +1,23 @@
+PODS:
+  - CCSpeedy (0.1.0):
+    - SnapKit
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - CCSpeedy (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  CCSpeedy:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CCSpeedy: 20e4e39813f976a60ff985be3e3f4cea47e38d71
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 2898e6c3a243e0c3babeaed54480055f39100ad2
+
+COCOAPODS: 1.11.3
