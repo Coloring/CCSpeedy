@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 extension UINavigationController: UINavigationControllerDelegate, UIGestureRecognizerDelegate {
-    //自定义返回按钮后恢复侧滑返回
+
     public func replyLateralSpreadsToReturn() {
         interactivePopGestureRecognizer?.delegate = self
         delegate = self
@@ -19,7 +19,7 @@ extension UINavigationController: UINavigationControllerDelegate, UIGestureRecog
 
 
 extension UINavigationController {
-    //设置导航栏背景颜色
+
     public func setup(backgroundColor: UIColor = .white, textColor: UIColor = .black , isTranslucent: Bool = true) {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()

@@ -1,14 +1,12 @@
 
 import Foundation
 
-//本地化字符串
-public func __(_ text: String) -> String {
+public func lz(_ text: String) -> String {
     return NSLocalizedString(text, tableName: "Localizations", bundle: Bundle.main, value: "", comment: "")
 }
 
 public class Tool {
     
-    /// APP icon
     static var appIcon: UIImage? {
         if let icons = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
             let primaryIcon = icons["CFBundlePrimaryIcon"] as? [String: Any],
@@ -24,7 +22,6 @@ public class Tool {
         return topViewControllerOptional()!
     }
     
-    /// 返回最顶层的 view controller
     @available(iOSApplicationExtension, unavailable)
     public static func topViewControllerOptional() -> UIViewController? {
         var keyWinwow = UIApplication.shared.keyWindow
@@ -63,7 +60,7 @@ public class Tool {
 }
 
 extension Tool {
-    /// 返回本地化的app名称
+
     public static func appName() -> String {
         if let appName = Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String {
             return appName
@@ -74,7 +71,6 @@ extension Tool {
         }
     }
     
-    /// 返回版本号
     public static func appVersion() -> String {
         return (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""
     }
@@ -90,17 +86,14 @@ extension Tool {
         return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad
     }()
     
-    /// 是否横竖屏，用户界面横屏了才会返回true
     @available(iOSApplicationExtension, unavailable)
     public static var isLandscape: Bool {
         return UIApplication.shared.statusBarOrientation.isLandscape
     }
     
-    /// 屏幕宽度，跟横竖屏无关
     @available(iOSApplicationExtension, unavailable)
     public static let deviceWidth = isLandscape ? UIScreen.main.bounds.height : UIScreen.main.bounds.width
 
-    /// 屏幕高度，跟横竖屏无关
     @available(iOSApplicationExtension, unavailable)
     public static let deviceHeight = isLandscape ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
     
