@@ -1,9 +1,9 @@
 {
   "name": "CCSpeedy",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "Coloring Speedy.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/coloring/CCSpeedy",
+  "homepage": "https://github.com/Coloring/CCSpeedy",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "coloring": "coloring"
   },
   "source": {
-    "git": "https://github.com/coloring/CCSpeedy.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Coloring/CCSpeedy.git",
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "11.0"
