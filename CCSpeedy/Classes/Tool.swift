@@ -57,6 +57,14 @@ public class Tool {
         return top
     }
     
+    @available(iOSApplicationExtension, unavailable)
+    public static var safeAreaInsets: UIEdgeInsets {
+        if let insets = UIApplication.shared.delegate?.window??.safeAreaInsets {
+            return insets
+        }
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
 }
 
 extension Tool {
