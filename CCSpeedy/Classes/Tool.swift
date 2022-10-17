@@ -79,6 +79,19 @@ extension Tool {
         }
     }
     
+    public static func bundleID() -> String {
+        let isExtension = Bundle.main.bundleURL.pathExtension == "appex"
+        let bundleIdentifier = Bundle.main.bundleIdentifier ?? ""
+        if isExtension {
+            var strings = bundleIdentifier.components(separatedBy: ".")
+            strings.removeLast()
+            return strings.joined(separator: ".")
+        }
+        else {
+            return bundleIdentifier
+        }
+    }
+    
     public static func appVersion() -> String {
         return (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""
     }
