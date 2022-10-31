@@ -65,7 +65,7 @@ public class Tool {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
-    public func currentWindow() -> UIWindow? {
+    public static func currentWindow() -> UIWindow? {
         if #available(iOS 14.0, *) {
             if let window = UIApplication.shared.connectedScenes.map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.first {
                 return window
