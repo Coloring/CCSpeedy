@@ -7,11 +7,11 @@ public func lz(_ text: String) -> String {
 
 public class Tool {
     
-    static var appIcon: UIImage? {
+    public static var appIcon: UIImage? {
         if let icons = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
-            let primaryIcon = icons["CFBundlePrimaryIcon"] as? [String: Any],
-            let iconFiles = primaryIcon["CFBundleIconFiles"] as? [String],
-            let lastIcon = iconFiles.last {
+           let primaryIcon = icons["CFBundlePrimaryIcon"] as? [String: Any],
+           let iconFiles = primaryIcon["CFBundleIconFiles"] as? [String],
+           let lastIcon = iconFiles.last {
             return UIImage(named: lastIcon)
         }
         return nil
@@ -94,7 +94,7 @@ public class Tool {
 }
 
 extension Tool {
-
+    
     public static func appName() -> String {
         if let appName = Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String {
             return appName
@@ -140,7 +140,7 @@ extension Tool {
     
     @available(iOSApplicationExtension, unavailable)
     public static let deviceWidth = isLandscape ? UIScreen.main.bounds.height : UIScreen.main.bounds.width
-
+    
     @available(iOSApplicationExtension, unavailable)
     public static let deviceHeight = isLandscape ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
     
@@ -148,7 +148,7 @@ extension Tool {
 
 extension Tool {
     
-    static func isChina() -> Bool {
+    public static func isChina() -> Bool {
         if getLanguageType() == "zh-Hans-CN" {
             return true
         } else {
@@ -156,7 +156,7 @@ extension Tool {
         }
     }
     
-    static func getLanguageType() -> String {
+    public static func getLanguageType() -> String {
         let def = UserDefaults.standard
         let allLanguages: [String] = def.object(forKey: "AppleLanguages") as! [String]
         let chooseLanguage = allLanguages.first
@@ -186,7 +186,7 @@ extension Tool {
 
 extension Tool {
     
-   static func rateApp(appID: String) {
+   public static func rateApp(appID: String) {
         if let url = URL(string: "https://itunes.apple.com/us/app/id\(appID)?action=write-review") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
