@@ -24,6 +24,7 @@
 		44DA658EA15B0EF239C79CA40049A8AA /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD101E65ADCCC341BCD3BFF777CA947C /* ConstraintConfig.swift */; };
 		48FE11CDF780DF89B0ABF96CE188C1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		4C4442463243F09A2A443E6050529A48 /* CCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C6F3FB55B74A45C2603D33E3FB3763 /* CCNavigationController.swift */; };
+		51A59A2E292497D000116260 /* CCShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A59A2D292497D000116260 /* CCShadow.swift */; };
 		52FE617DD8BA332708429D5B960840DC /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C38722D9F65992CF2200038C8651E /* ConstraintMakerEditable.swift */; };
 		558B50F5E8D02F966AC9407AB608B2EF /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DCDFF2011C08759407B4E2038CA11 /* ConstraintAttributes.swift */; };
 		5F59775500ABDCBA4DFD1929AD3A8AD4 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143498449916D71708A8AF2F96E7320A /* SnapKit-dummy.m */; };
@@ -127,6 +128,7 @@
 		4D2DDC6CBE5778661C3A6BC4D25CE8CC /* Pods-CCSpeedy_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CCSpeedy_Tests"; path = Pods_CCSpeedy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9ED88B62FFCD15AF761E2FED4686F2 /* Pods-CCSpeedy_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CCSpeedy_Example-Info.plist"; sourceTree = "<group>"; };
 		5032FD34D5BB9A1F925C649B43CC02DC /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Sources/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
+		51A59A2D292497D000116260 /* CCShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCShadow.swift; path = CCSpeedy/Classes/CCShadow.swift; sourceTree = "<group>"; };
 		54A0BC61944B3E89515CACB83BB1B976 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Sources/ConstraintDescription.swift; sourceTree = "<group>"; };
 		57D5A660621C1A1ABB2EF477929F7715 /* Pods-CCSpeedy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CCSpeedy_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		583BBF75085D255E27A5F9EF9EC203A5 /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintMakerRelatable+Extensions.swift"; path = "Sources/ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				21C6F3FB55B74A45C2603D33E3FB3763 /* CCNavigationController.swift */,
 				141E29E6830883174EB415117446C1F2 /* CCTextField.swift */,
 				8D35BB9D0F2373A95EC39240DD51CE95 /* CCView.swift */,
+				51A59A2D292497D000116260 /* CCShadow.swift */,
 				D2619CD3F49E4EEE4BD528AA1CC6F807 /* Tool.swift */,
 				DC86DEAED56C53B89F96D895ECBCDD09 /* Pod */,
 				969658398BA417CF5D28E511DD8A104B /* Support Files */,
@@ -604,6 +607,7 @@
 				4C4442463243F09A2A443E6050529A48 /* CCNavigationController.swift in Sources */,
 				A3C60A0347DAC8F0A2236DD14ED24A3B /* CCSpeedy-dummy.m in Sources */,
 				6AEE60CA5F34901DD04FB1B62C1D3058 /* CCTextField.swift in Sources */,
+				51A59A2E292497D000116260 /* CCShadow.swift in Sources */,
 				1357E15425238CB113F149A1A8A5C4DC /* CCView.swift in Sources */,
 				A0A77B8412C7BA5A4F2AE99A281FD451 /* Tool.swift in Sources */,
 			);
