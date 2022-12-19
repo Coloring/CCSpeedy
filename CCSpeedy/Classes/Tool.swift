@@ -125,6 +125,10 @@ extension Tool {
     public static func buildNumber() -> String {
         return (Bundle.main.infoDictionary?["CFBundleVersion"] as? String) ?? ""
     }
+    
+    public static func systemVersion() -> String {
+        return UIDevice.current.systemVersion
+    }
 }
 
 extension Tool {
