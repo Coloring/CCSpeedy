@@ -44,7 +44,7 @@ public extension UIView {
 
 public extension UIView {
     
-    func asImage() -> UIImage {
+    public func asImage() -> UIImage {
         let render = UIGraphicsImageRenderer(bounds: bounds)
         let image = render.image(actions: { (context) in
             layer.render(in: context.cgContext)
