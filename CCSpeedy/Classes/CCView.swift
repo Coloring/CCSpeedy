@@ -41,3 +41,15 @@ public extension UIView {
         }
     }
 }
+
+extension UIView {
+    
+    func asImage() -> UIImage {
+        let render = UIGraphicsImageRenderer(bounds: bounds)
+        let image = render.image(actions: { (context) in
+            layer.render(in: context.cgContext)
+        })
+        return image
+    }
+    
+}
