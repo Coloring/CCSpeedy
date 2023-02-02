@@ -42,7 +42,7 @@ public extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     
     func asImage() -> UIImage {
         let render = UIGraphicsImageRenderer(bounds: bounds)
