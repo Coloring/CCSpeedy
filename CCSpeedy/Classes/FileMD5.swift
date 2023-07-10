@@ -1,9 +1,3 @@
-//
-//  FileMD5.swift
-//  CCSpeedy
-//
-//  Created by Coloring on 2023/2/2.
-//
 
 import Foundation
 import CommonCrypto

@@ -1,9 +1,3 @@
-//
-//  CCLongPressButton.swift
-//  DigitalSignage
-//
-//  Created by Coloring on 2023/6/8.
-//
 
 import UIKit
 
