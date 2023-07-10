@@ -38,6 +38,7 @@
 		80C4B8C91C60598A320573BA6FFB2DA8 /* CCLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E041F18A399B23F9C3E026106B204E3 /* CCLabel.swift */; };
 		870443DEB4F55F0785BD4FA1C2EB2BE2 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032FD34D5BB9A1F925C649B43CC02DC /* ConstraintLayoutSupportDSL.swift */; };
 		9853543020BB5D0CE0B41F5A79A34DAE /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458867733779570F7398C76B46AEAF5E /* ConstraintView.swift */; };
+		9A94BEF02A5C240600F75C9C /* CCLongPressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BEEF2A5C240600F75C9C /* CCLongPressButton.swift */; };
 		9A96857E298B4AE400BCF8D0 /* FileMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96857D298B4AE400BCF8D0 /* FileMD5.swift */; };
 		A034B09BFB501411846C5214F18B2F7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		A0A77B8412C7BA5A4F2AE99A281FD451 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2619CD3F49E4EEE4BD528AA1CC6F807 /* Tool.swift */; };
@@ -152,6 +153,7 @@
 		96AC2841224FA54E8E49EA52AD8CE0AE /* CCColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CCColor.swift; path = CCSpeedy/Classes/CCColor.swift; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9810CBD0FA62B10B85AAE9115D3D2E7E /* CCSpeedy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCSpeedy.release.xcconfig; sourceTree = "<group>"; };
+		9A94BEEF2A5C240600F75C9C /* CCLongPressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCLongPressButton.swift; path = CCSpeedy/Classes/CCLongPressButton.swift; sourceTree = "<group>"; };
 		9A96857D298B4AE400BCF8D0 /* FileMD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileMD5.swift; path = CCSpeedy/Classes/FileMD5.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F0A527ED8F0A719FF610D743A87DAD3 /* ConstraintMakerPrioritizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPrioritizable.swift; path = Sources/ConstraintMakerPrioritizable.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				E092CC4FE75E2350DC19D0761523CE5A /* CCImage.swift */,
 				6E041F18A399B23F9C3E026106B204E3 /* CCLabel.swift */,
 				21C6F3FB55B74A45C2603D33E3FB3763 /* CCNavigationController.swift */,
+				9A94BEEF2A5C240600F75C9C /* CCLongPressButton.swift */,
 				141E29E6830883174EB415117446C1F2 /* CCTextField.swift */,
 				8D35BB9D0F2373A95EC39240DD51CE95 /* CCView.swift */,
 				51A59A2D292497D000116260 /* CCShadow.swift */,
@@ -607,6 +610,7 @@
 				9A96857E298B4AE400BCF8D0 /* FileMD5.swift in Sources */,
 				054B807731F9EBEE0E7D4A4A0A3FD6C2 /* CCColor.swift in Sources */,
 				FAB4A9124A5F8FBD6F2FA0306DF6197A /* CCImage.swift in Sources */,
+				9A94BEF02A5C240600F75C9C /* CCLongPressButton.swift in Sources */,
 				80C4B8C91C60598A320573BA6FFB2DA8 /* CCLabel.swift in Sources */,
 				4C4442463243F09A2A443E6050529A48 /* CCNavigationController.swift in Sources */,
 				A3C60A0347DAC8F0A2236DD14ED24A3B /* CCSpeedy-dummy.m in Sources */,

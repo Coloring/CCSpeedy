@@ -20,9 +20,9 @@ public extension UIImage {
     /// APP icon
     static var icon: UIImage? {
         if let icons = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
-            let primaryIcon = icons["CFBundlePrimaryIcon"] as? [String: Any],
-            let iconFiles = primaryIcon["CFBundleIconFiles"] as? [String],
-            let lastIcon = iconFiles.last {
+           let primaryIcon = icons["CFBundlePrimaryIcon"] as? [String: Any],
+           let iconFiles = primaryIcon["CFBundleIconFiles"] as? [String],
+           let lastIcon = iconFiles.last {
             return UIImage(named: lastIcon)
         }
         return nil
@@ -134,4 +134,71 @@ extension UIImage {
         
         return result
     }
+}
+
+
+extension UIImage {
+    
+    public func imageFixSize(scaledToSize newSize: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+    public func normalized() -> UIImage  {
+        if (self.imageOrientation == UIImage.Orientation.up) {
+            return self;
+        }
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale);
+        let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        self.draw(in: rect)
+        
+        if let normalizedImage = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()
+            return normalizedImage
+        } else {
+            return self
+        }
+    }
+    
+    public func resizeImage() -> UIImage? {
+        let originalImg = self
+        let width = originalImg.size.width
+        let height = originalImg.size.height
+        let scale = width / height
+        var sizeChange = CGSize()
+        if width > 1280 || height > 1280 {
+            if scale <= 2 && scale >= 1 {
+                let changedWidth:CGFloat = 1280
+                let changedheight:CGFloat = changedWidth / scale
+                sizeChange = CGSize(width: changedWidth, height: changedheight)
+            }else if scale >= 0.5 && scale <= 1 {
+                let changedheight:CGFloat = 1280
+                let changedWidth:CGFloat = changedheight * scale
+                sizeChange = CGSize(width: changedWidth, height: changedheight)
+            }else if width > 1280 && height > 1280 {
+                if scale > 2 {
+                    let changedheight:CGFloat = 1280
+                    let changedWidth:CGFloat = changedheight * scale
+                    sizeChange = CGSize(width: changedWidth, height: changedheight)
+                }else if scale < 0.5{
+                    let changedWidth:CGFloat = 1280
+                    let changedheight:CGFloat = changedWidth / scale
+                    sizeChange = CGSize(width: changedWidth, height: changedheight)
+                }
+            }else {
+                return originalImg
+            }
+        } else if width <= 1280 && height <= 1280 {
+            return originalImg
+        }
+        UIGraphicsBeginImageContext(sizeChange)
+        originalImg.draw(in: CGRect(x: 0, y: 0, width: sizeChange.width, height: sizeChange.height))
+        let resizedImg = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImg
+    }
+    
 }
