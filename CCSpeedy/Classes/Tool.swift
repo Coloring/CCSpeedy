@@ -160,6 +160,19 @@ extension Tool {
         }
     }
     
+    public static func isRTL() -> Bool {
+        guard let language = Locale.current.languageCode else { return false }
+        let direction = Locale.characterDirection(forLanguage: language)
+        switch direction {
+            case .leftToRight:
+                return false
+            case .rightToLeft:
+                return true
+            default:
+                return false
+        }
+    }
+    
     public static func getLanguageType() -> String {
         let def = UserDefaults.standard
         let allLanguages: [String] = def.object(forKey: "AppleLanguages") as! [String]
